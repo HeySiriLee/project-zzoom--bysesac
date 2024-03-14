@@ -1,0 +1,60 @@
+doctype html
+html(lang="es")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title zzoom
+        link(rel="shortcut icon", href="public/img/favicon.ico", type="image/x-icon")
+        link(rel="stylesheet", href='/public/css/styles.css')
+    body 
+        header 
+            div#logo
+                h1 ZZOOM
+        main
+            div#toast
+            div#introduce
+                section#intro
+            div#welcome
+                div#welcome-userinfo
+                    h4 Establezca su nombre de NickName
+                    div#welcome-userinfo__title
+                        p Puedes cambiar tu nombre de usuario más tarde !
+                        p Si no lo fijas, tu apodo será "Anónimo_{your sid id}"
+                        p Cuando entras en la sala de chat y hay un mismo apodo, tu apodo puede cambiarse.
+                    form#welcome-userinfo__form
+                        input(placeholder="nickname", required, type="text")
+                        button Establecer el apellido
+                
+                div#roomForm
+                    div#welcome-socketIO
+                        form#welcome-socketIO__form
+                            div#welcome-socketIO__form__title
+                            h4 Chat de grupo con Socket.io
+                            img(src="https://cdn.icon-icons.com/icons2/2389/PNG/512/socket_io_logo_icon_144874.png")
+                            input(placeholder="room name", required, type="text")
+                            button 
+                                h4 Entrar en el chat
+    
+                    div#welcome-webRTC
+                        form#welcome-webRTC__form
+                            div#welcome-webRTC__form__title
+                                h4 1:1 p2p video chat con webRTC
+                                img(src="https://styles.redditmedia.com/t5_2unw6/styles/communityIcon_3qc66h3yt5u01.png?width=256&v=enabled&s=9fc9266ecb17da3e88a715ea5356b76bcec2ad96")
+                            input(placeholder="room name", required, type="text")
+                            button Entrar 1:1 video chat
+
+                div#OpenRoomDiv
+                    div#OpenRoomTitle
+                        h4 Lista de salas de chat
+                    div#OpenRoomList
+                        ul#roomsList
+
+            
+                    
+
+
+
+        script(src="/socket.io/socket.io.js")
+        script(src="public/js/app.js")
+        script(src='https://kit.fontawesome.com/5e164c00b3.js' crossorigin='anonymous')
